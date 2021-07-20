@@ -14,36 +14,46 @@ console.log(fetch(API_URL))
 })*/
 /// 1a. (new div created for each)
 
+function jobAdItem_48(){
+    document.createElement('div');
+    // div.innerHTML =<p>${msg}</p>
+    document.getElementById("most-recent").appendChild(div);
+}
+
 /// 1b. maximum of 10 divs at any time
-/*
-if (jobAdItem() === 10){
-    return;
-} else {
-    // 'un append child(?)'
-    return;
-};
-*/
+
+    // @TODO if there are exactly 10 instances of jobAdItem ( === 10), return. else, do not append child. return;
 
 // 2. Users can see all jobs (listings.html)
-/*function jobAdItem(){
+
+function jobAdItem_All(){
     document.createElement('div');
-    div.innerHTML = <h2>${msg}</h2><p>${msg}</p>;
+    // div.innerHTML = <h2>${msg}</h2><p>${msg}</p>;
     document.getElementById("all-listings").appendChild(div);
-}*/
+}
 
 // 3. Users can search for all jobs within 48 hour period
-addEventListener("submit",() =>{
-    form.preventDefault();
-});
 /// 3a. set default date to current date
 /*document.getElementById("date");*/
 
 // 4. Users can change the date and it shows the last 48 hours from the date chosen (YYYY,MM,DD)
 const form = document.getElementById("form");
 const checkBox = document.getElementById("checkbox");
-form.addEventListener("change", (ev)=>{
-    // console.log(ev);
+form.addEventListener("submit", (ev)=>{
+    ev.preventDefault()
+    // if date is specified, use specified date.
+    // else, default = today's date.
+    console.log(ev);
+    return last2DJobs();
 });
+
+function last2DJobs() {
+    console.log("These are jobs from the last 2 days.")
+    /* Data from jobs in last 48 hours shown
+    * (new div created for each job containing...
+    * JOB TITLE | Job Description | ~ Salary | ~ Date listed )*/
+}
+
 
 checkBox.addEventListener('change', (ev)=>{
    if (checkBox.checked){
