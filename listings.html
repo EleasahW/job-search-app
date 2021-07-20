@@ -8,8 +8,9 @@
     <title>VacanciesUp! - Listings</title>
     <link rel="stylesheet" href="tailwind.css">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body class="h-full w-screen">
+<body id="listings" class="h-full w-screen">
     <!--brand info-->
     <div id="head" class="py-5">
         <div id="brand-name" class="flex justify-center">
@@ -25,17 +26,21 @@
         <div id="section-title" class="flex justify-center">
             <h3 class="text-3xl">Job Listings</h3>
         </div>
-        <div id="date-filter" class="flex">
-            <input type="checkbox">
+        <form id="form" class="flex">
+            <input id="checkbox" type="checkbox">
             <p>Show Jobs from Last 48 hours from:</p>
-            <input type="date">
-        </div>
+            <input id="date" type="date">
+            <input type="submit" value="Go!">
+        </form>
 
         <!--all job listings-->
         <div id="all-listings" class="flex-col bg-white p-4 rounded-3xl w-5/6">
-
+            <div class="h-40 w-5/6 bg-pink-300">
+                <h3></h3>
+                <p></p>
+                <a id="star"><span class="material-icons">star</span></a>
+            </div>
         </div>
-
     </div>
 
 <script src="app.js"></script>
