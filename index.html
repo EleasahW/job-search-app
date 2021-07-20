@@ -7,15 +7,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>VacanciesUp! - Home</title>
     <link rel="stylesheet" href="tailwind.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="h-full w-screen">
+    <!--brand info-->
     <div id="head" class="py-5">
-        <div id="brand-info" class="flex justify-center">
+        <div id="brand-name" class="flex justify-center">
             <h1 class="text-5xl font-bold pt-4">VacanciesUp!</h1>
         </div>
         <div id="brand-subtitle" class="flex justify-center">
             <h4 class="text-lg py-2">The hippest tech-jobs on the web!</h4>
         </div>
     </div>
+
+    <!-- navigation -->
+    <div id="nav" class="flex justify-between py-4 mx-36 border-b-2 border-gray-50">
+        <div id="nav-left" class="flex space-x-10">
+            <p class="text-xl"><a href="index.html">Home</a></p>
+            <p class="text-xl"><a href="listings.html">Listings</a></p>
+            <p class="text-xl"><a href="saved.html">Saved</a></p>
+        </div>
+        <div id="nav-right" class="flex space-x-10 text-gray-400">
+            <p class="text-lg"><a href="about.html">About</a></p>
+            <p class="text-lg"><a href="#">Log In</a></p>
+        </div>
+    </div>
+
+    <!-- main -->
+    <div id="main" class="flex justify-center">
+        <!--10 most recent listings-->
+        <div id="most-recent" class="bg-white grid grid-flow-col grid-cols-2 grid-rows-5 gap-4 p-4 rounded-3xl w-5/6">
+
+        </div>
+
+        <!--saved listings-->
+        <div id="saved" class="flex-col bg-white p-4 rounded-3xl w-5/6">
+
+        </div>
+    </div>
+
+<script src="app.js"></script>
 </body>
 </html>
